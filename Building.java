@@ -27,7 +27,7 @@ public class Building
 	public Building(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup,
 		String subgroup) 
 	{
-		super();
+		
 		this.projectName = projectName;
 		this.completeAddress = completeAddress;
 		this.totalSquareFeet = totalSquareFeet;
@@ -44,6 +44,7 @@ public class Building
 
 		public void draw()
 		{
+			System.out.println("Creating code for: "+getClass());
 			
 			
 		}

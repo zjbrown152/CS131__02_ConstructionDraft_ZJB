@@ -9,28 +9,42 @@ public class Mall extends Business
 	public Mall() 
 	{
 		super();
-		RentedUnits=0;
-		medianUnitSize=0.0;
-		numParkingSpaces=0;
+		this.RentedUnits=0;
+		this.medianUnitSize=0.0;
+		this.numParkingSpaces=0;
 		
 	}
 
 
 	public Mall(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup,
-			String subgroup) {
+			String subgroup) 
+	{
 		super(projectName, completeAddress, totalSquareFeet, occupancyGroup, subgroup);
+		this.RentedUnits=RentedUnits;
+		this.medianUnitSize=medianUnitSize;
+		this.numParkingSpaces=numParkingSpaces;
 		
 
 	}
 	
-	public void draw()
-	{
-		
-	}
+	
 	
 	public String displayData()
 	{
 		StringBuilder m= new StringBuilder();
+		m.append("Project Name= "+projectName+"\n");
+		m.append("Address= "+completeAddress+"\n");
+		m.append("Square Feet= "+totalSquareFeet+"\n");
+		m.append("Occupancy Group= "+occupancyGroup+"\n");
+		m.append("Subgroup= "+subgroup+"\n");
+		m.append("Rented Units= "+RentedUnits+"\n");
+		m.append("Unit Size= "+medianUnitSize+"\n");
+		m.append("Parking Spaces= "+numParkingSpaces+"\n");
+		return m.toString();
+	}
+		
+		
+		
 
 
 	public int getRentedUnits() {
@@ -61,16 +75,14 @@ public class Mall extends Business
 	public void setNumParkingSpaces(int numParkingSpaces) {
 		this.numParkingSpaces = numParkingSpaces;
 	}
+
+
+	
 	
 	
 
 
-	@Override
-	public String toString() 
-	{
-		return "Mall [RentedUnits=" + RentedUnits + ", medianUnitSize=" + medianUnitSize + ", numParkingSpaces="
-				+ numParkingSpaces + "]";
-	}
+	
 	
 	
 

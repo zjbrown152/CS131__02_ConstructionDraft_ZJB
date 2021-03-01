@@ -7,38 +7,60 @@ public class SingleFamilyHome extends Residential
 	
 	public SingleFamilyHome()
 	{
-		boolean garage=false;
-		String projectname=("");
-		String completeAdress=("");
-		double totalSquareFeet=0;
-		String occupancyGroup=("");
-		String subgroup=("");
 		super();
+		this.garage=false;
 		
 		
 	}
 	
-	public SingleFamilyHome(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup, String subgroup)
+	
+	
+	public SingleFamilyHome(String projectName, String completeAddress, double totalSquareFeet, String occupancyGroup,
+			String subgroup) 
 	{
-		setGarage(true);
-		setProjectName
-		
-		
+		super(projectName, completeAddress, totalSquareFeet, occupancyGroup, subgroup);
+		// TODO Auto-generated constructor stub
+		this.garage=garage;
 	}
 	
-	public void setGarage(boolean g)
+	
+	
+	public String displayData()
 	{
-		garage=g;
+		StringBuilder sfh= new StringBuilder();
+		sfh.append("Project Name= "+projectName+"\n");
+		sfh.append("Address= "+completeAddress+"\n");
+		sfh.append("Square Feet= "+totalSquareFeet+"\n");
+		sfh.append("Occupancy Group= "+occupancyGroup+"\n");
+		sfh.append("Subgroup= "+subgroup+"\n");
+		sfh.append("Garage= "+garage+"\n");
+		return sfh.toString();
+		
 	}
-	public boolean getGarage()
-	{
+
+
+
+	
+
+
+
+
+
+
+	public boolean isGarage() {
 		return garage;
 	}
-	public void setProjectName(String pn)
-	{
-		projectname=pn;
+
+
+
+	public void setGarage(boolean garage) {
+		this.garage = garage;
 	}
 	
-		
-	}
+	
 }
+
+
+
+
+

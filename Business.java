@@ -7,7 +7,7 @@ public class Business extends Building
 	public Business()
 	{
 		super();
-		numRentableUnits=0;
+		this.numRentableUnits=0;
 	}
 	
 	
@@ -16,21 +16,12 @@ public class Business extends Building
 			String subgroup) 
 	{
 		super(projectName, completeAddress, totalSquareFeet, occupancyGroup, subgroup);
+		this.numRentableUnits=numRentableUnits;
 		
 	}
 	
-	public void draw()
-	{
-		
-	}
 	
-	public String displayData()
-	{
-		super.displayData();
-		StringBuilder c= new StringBuilder();
-		c.append(")
-		
-	}
+
 
 
 
